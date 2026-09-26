@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WellG Tech Co.</title>
+  <meta name="description" content="WellG Tech Co. — Making the complex feel simple." />
+  <meta name="theme-color" content="#1a1a1a" />
+  <link rel="icon" href="/logo-mark.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,100..900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #1a1a1a;
+      --fg: #f5f5f5;
+      --muted: #a3a3a3;
+      --accent: #0aff74;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: "Google Sans Flex", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      gap: 1.75rem;
+    }
+    .logo {
+      width: min(280px, 72vw);
+      height: auto;
+      display: block;
+      margin-inline: auto;
+    }
+    .hero {
+      width: 100%;
+      max-width: 48rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    h1 {
+      font-size: clamp(2.7rem, 7vw, 3.5rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      font-optical-sizing: auto;
+      text-align: center;
+      width: 100%;
+    }
+    p.lead {
+      margin-top: 0.85rem;
+      max-width: 36rem;
+      width: 100%;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      line-height: 1.45;
+      font-weight: 150;
+      text-align: center;
+      margin-inline: auto;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.25rem;
+      width: 100%;
+    }
+    a.btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.7rem 1.15rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+    a.btn-primary {
+      background: var(--accent);
+      color: #0a0a0a;
+    }
+    a.btn-primary:hover { filter: brightness(1.05); }
+    a.btn-ghost {
+      background: transparent;
+      color: var(--fg);
+      border-color: #3a3a3a;
+    }
+    a.btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    footer {
+      width: 100%;
+      padding: 1.25rem;
+      text-align: center;
+      color: #666;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="/logo-mark.svg" width="917" height="459" alt="wellg" />
+    <div class="hero">
+      <h1>WellG Tech Co.</h1>
+      <p class="lead">Making the complex feel simple.</p>
+    </div>
+    <div class="links">
+      <a class="btn btn-primary" href="mailto:well@wellg.dev">Get in touch</a>
+      <a class="btn btn-ghost" href="https://github.com/wellguimaraes" rel="noopener noreferrer" target="_blank">GitHub</a>
+    </div>
+  </main>
+  <footer>© <span id="y"></span> wellg.dev</footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+<!-- v8 -->
+</html>
